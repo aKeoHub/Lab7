@@ -12,11 +12,11 @@ import javax.persistence.*;
 @Entity
 @Table(name = "role")
 @NamedQueries({
-    @NamedQuery(name = "Role.findAll", query = "SELECT r FROM role r")
+    @NamedQuery(name = "Role.findAll", query = "SELECT r FROM Role r")
 })
 public class Role implements Serializable {
     @Id
-    @Basic
+    @Basic(optional = false)
     @Column(name = "role_id")   
     private int id;
     

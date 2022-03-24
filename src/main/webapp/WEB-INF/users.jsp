@@ -38,11 +38,7 @@
                                 <td>${user.active ? "Y" : "N"}</td>
                                 <td>${user.role.name}</td>
                                 <td>
-                                    <form action ="user" method="post">
-                                        <input type="hidden" name="action" value="delete">
-                                        <input type="hidden" name="email" value="${user.email}">
-                                        <button type="submit">delete</button>
-                                    </form>
+                                    <a href="user?action=delete&email=${user.email}">Delete</a>
                                 </td>
                             </tr>
                         </c:forEach>
